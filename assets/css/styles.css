@@ -145,7 +145,7 @@ p { margin: 0 0 1.1em; }
 .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 
 .brand { display: flex; align-items: center; gap: 14px; color: var(--ivory); }
-.brand-mark { width: 42px; height: 42px; color: var(--gold-light); }
+.brand-mark { width: auto; height: 46px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font-family: var(--serif); font-size: 1.45rem; font-weight: 500; letter-spacing: 0.04em; }
 .brand-sub { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; opacity: .7; margin-top: 3px; }
@@ -391,8 +391,12 @@ p { margin: 0 0 1.1em; }
 .site-footer { background: var(--navy-900); color: rgba(246,242,234,.72); padding: 100px 0 40px; font-size: .92rem; }
 .footer-top { display: grid; grid-template-columns: 4fr 8fr; gap: 80px; padding-bottom: 60px; border-bottom: 1px solid var(--line-light); }
 .footer-brand .brand-name { color: var(--ivory); display: block; font-size: 1.9rem; }
-.footer-brand .brand-sub { display: block; color: var(--gold-light); opacity: 1; margin-bottom: 20px; }
+.footer-brand .brand-sub { display: block; color: var(--gold-light); opacity: 1; }
 .footer-brand p { max-width: 320px; }
+.footer-mark { width: 84px; height: auto; margin-bottom: 22px; }
+.footer-brand .brand-sub { margin-bottom: 6px; }
+.brand-motto { display: block; font-size: .66rem; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.footer-brand .tagline { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--ivory); margin-bottom: 10px; }
 .footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .footer-nav h5 { font-family: var(--sans); font-size: .7rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; }
 .footer-nav a { display: block; padding: 5px 0; transition: color .3s; }
@@ -468,9 +472,10 @@ p { margin: 0 0 1.1em; }
 
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
-  .brand-mark { width: 36px; height: 36px; }
+  .brand-mark { height: 38px; }
   .brand-name { font-size: 1.25rem; }
   .hero-inner { padding-bottom: 60px; }
+  .eyebrow-extra { display: none; }
   .hero-foot { position: relative; }
   .hero-stats { grid-template-columns: 1fr; }
   .hero-stats > div { padding: 18px 0; }
