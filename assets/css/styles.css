@@ -492,3 +492,4 @@ p { margin: 0 0 1.1em; }
   .footer-nav { grid-template-columns: 1fr 1fr; }
   .quote-band { padding: 90px 0; }
 }
+.contact-line a { overflow-wrap: anywhere; }

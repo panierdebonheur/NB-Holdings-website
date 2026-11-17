@@ -27,11 +27,14 @@ python3 -m http.server 8000
 
 Any static host works: GitHub Pages (Settings → Pages → deploy from this branch, root folder), Netlify, Vercel, Cloudflare Pages or S3.
 
+## Domain & contact
+
+- Site: https://www.nbholdingspartnership.com (the `CNAME` file is for GitHub Pages; other hosts ignore it)
+- Investor contact: markhamilton@nbholdingspartnership.com. It appears in `index.html`, `privacy.html` and `IR_EMAIL` in `assets/js/main.js`.
+
 ## Before going live
 
-- **Email address:** `ir@nbholdingspartnership.com` is a placeholder. Replace it in `index.html`, `privacy.html` and `IR_EMAIL` in `assets/js/main.js`.
 - **Inquiry form:** by default, submitting opens the visitor's email client with the inquiry pre-filled. To receive submissions directly, create a form endpoint (for example Formspree or Netlify Forms) and add it to the form: `<form ... data-endpoint="https://formspree.io/f/XXXX">`.
 - **Leadership photo:** the "MH" monogram stands in for a headshot. Replace `.portrait-frame` contents with an `<img>` when one is available.
 - **Logo:** the SVG marks were vectorized from the supplied logo image. If your designer has original vector files, drop them in at the same paths.
-- **Social preview image:** `og:image` uses a relative path; change it to the full URL (e.g. `https://yourdomain.com/assets/img/nb-holdings-logo.jpg`) once the domain is live.
 - **Legal review:** the site states that it relates only to Rule 506(c) offerings and that Rule 506(b) offerings are made only privately to investors with a pre-existing, substantive relationship. The disclosures and privacy policy are general templates; have securities counsel review them.

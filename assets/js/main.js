@@ -3,7 +3,7 @@
   "use strict";
 
   // Investor inquiries are delivered to this address (see README to switch to a form service).
-  var IR_EMAIL = "ir@nbholdingspartnership.com";
+  var IR_EMAIL = "markhamilton@nbholdingspartnership.com";
 
   document.documentElement.classList.remove("no-js");
 
