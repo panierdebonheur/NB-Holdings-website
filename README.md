@@ -34,7 +34,7 @@ Any static host works: GitHub Pages (Settings → Pages → deploy from this bra
 
 ## Before going live
 
-- **Inquiry form:** by default, submitting opens the visitor's email client with the inquiry pre-filled. To receive submissions directly, create a form endpoint (for example Formspree or Netlify Forms) and add it to the form: `<form ... data-endpoint="https://formspree.io/f/XXXX">`.
+- **Inquiry form:** submissions go through Formspree (`https://formspree.io/f/xdegzwky`) and are emailed to the address set in that Formspree form. Change the endpoint in the `<form>` tag in `index.html` if the form is ever replaced.
 - **Leadership photo:** the "MH" monogram stands in for a headshot. Replace `.portrait-frame` contents with an `<img>` when one is available.
 - **Logo:** the SVG marks were vectorized from the supplied logo image. If your designer has original vector files, drop them in at the same paths.
 - **Legal review:** the site states that it relates only to Rule 506(c) offerings and that Rule 506(b) offerings are made only privately to investors with a pre-existing, substantive relationship. The disclosures and privacy policy are general templates; have securities counsel review them.
