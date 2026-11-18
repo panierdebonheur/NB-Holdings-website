@@ -329,6 +329,8 @@ p { margin: 0 0 1.1em; }
 }
 .portrait-monogram { font-family: var(--serif); font-size: clamp(5rem, 10vw, 8rem); color: var(--gold-light); font-weight: 400; letter-spacing: .04em; }
 .leader-portrait { position: relative; z-index: 0; }
+.portrait-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.portrait-frame::before { z-index: 1; border-color: rgba(212,180,126,.55); }
 .leader-title { font-size: .8rem !important; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light) !important; margin-bottom: 2rem; }
 .leader-copy .btn { margin-top: 1.2rem; }
 
