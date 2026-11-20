@@ -496,3 +496,7 @@ p { margin: 0 0 1.1em; }
 }
 .contact-line a { overflow-wrap: anywhere; }
 .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.footer-social { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; color: var(--gold-light); font-size: .88rem; letter-spacing: .02em; transition: color .3s; }
+.footer-social svg { width: 22px; height: 22px; flex-shrink: 0; }
+.footer-social:hover { color: var(--ivory); }
