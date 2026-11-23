@@ -38,13 +38,15 @@ Any static host works: GitHub Pages (Settings → Pages → deploy from this bra
 
 | Path | What happens | Category recorded |
 |---|---|---|
-| I have a business idea | Name + email + consent, then the Business Startup Workbook downloads (`downloads/`) | Business Idea |
-| I want to get into real estate | Joins the training waitlist | Real Estate |
+| I have a business idea | Visitor ticks the downloads they want, enters name + email + consent, then gets a download button for each (a single pick downloads automatically) | Business Idea |
+| I want to get into real estate | Joins the training waitlist (can become a download list the same way) | Real Estate |
 | I'm interested in investing | Goes to the accredited-investor inquiry on the home page | Investor |
 
-Every submission goes to Formspree with `category`, `resource` and `source` fields. **Source tracking:** add `?utm_source=instagram&r=<reel-name>` to a link (e.g. in a DM or story link) and that tag is saved with the lead, including if they move on to the investor form. Link straight to a path with `/start/#business-idea` or `/start/#real-estate`.
+Every submission goes to Formspree as a separate lead with `category`, `resources` (what they chose, comma-separated) and `source`. Someone who signs up on two paths is recorded once in each category; after one sign-up, the page offers the other path with their name and email pre-filled.
 
-To add a new free resource: put the PDF in `downloads/`, copy one of the `<section class="path">` blocks in `start/index.html`, and change the text, `resource` value and `data-download` path.
+**Source tracking:** add `?utm_source=instagram&r=<reel-name>` to a link and that tag is saved with the lead, including if they move on to the investor form. Link straight to a path with `/start/#business-idea` or `/start/#real-estate`.
+
+**Adding a download:** put the PDF in `downloads/`, then in `start/index.html` copy a `<label class="pick">` block inside that path's "Choose your free downloads" list and change `value`, `data-file` and the visible text. To give real estate downloads, copy the business path's `<fieldset class="resource-picks">` and success `download-list` into the real estate form and remove its hidden `resources` waitlist field.
 
 ## Before going live
 

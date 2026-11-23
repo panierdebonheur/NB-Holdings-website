@@ -35,26 +35,34 @@
       <section class="path" id="business-idea">
         <button class="path-btn" aria-expanded="false" aria-controls="panel-business">
           <span class="path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span>
-          <span class="path-text"><strong>I have a business idea</strong><small>Free Business Startup Workbook</small></span>
+          <span class="path-text"><strong>I have a business idea</strong><small>Free workbooks &amp; tools</small></span>
           <span class="path-chev" aria-hidden="true"></span>
         </button>
         <div class="path-panel" id="panel-business" hidden>
-          <p>Eight practical worksheets to test your idea, choose a structure, check the numbers, and plan your launch and first 90 days.</p>
-          <form class="lead-form" data-endpoint="https://formspree.io/f/xdegzwky" data-download="/downloads/nb-holdings-business-startup-workbook.pdf" novalidate>
-            <input type="hidden" name="_subject" value="New Lead — Business Startup Workbook">
+          <p>Practical, free tools to test your idea, check the numbers, and plan your launch. Tick what you'd like.</p>
+          <form class="lead-form" data-endpoint="https://formspree.io/f/xdegzwky" novalidate>
+            <input type="hidden" name="_subject" value="New Lead — Business Idea">
             <input type="hidden" name="category" value="Business Idea">
-            <input type="hidden" name="resource" value="Business Startup Workbook">
             <input type="hidden" name="source" value="">
             <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <fieldset class="resource-picks">
+              <legend>Choose your free downloads</legend>
+              <!-- To add a resource: copy one <label class="pick"> block, then change value, data-file and the text. -->
+              <label class="pick">
+                <input type="checkbox" name="resources" value="Business Startup Workbook" data-file="/downloads/nb-holdings-business-startup-workbook.pdf" checked>
+                <span><strong>Business Startup Workbook</strong><small>8 worksheets &middot; PDF</small></span>
+              </label>
+            </fieldset>
             <label>First name<input type="text" name="first" autocomplete="given-name" required></label>
             <label>Email<input type="email" name="email" autocomplete="email" required></label>
-            <label class="consent"><input type="checkbox" name="email_consent" value="Yes" required><span>Send me the workbook and occasional resources from NB Holdings. Unsubscribe anytime.</span></label>
-            <button type="submit" class="btn btn-gold btn-block">Get the free workbook</button>
+            <label class="consent"><input type="checkbox" name="email_consent" value="Yes" required><span>Send me my downloads and occasional resources from NB Holdings. Unsubscribe anytime.</span></label>
+            <button type="submit" class="btn btn-gold btn-block">Get my free downloads</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
           <div class="lead-success" hidden>
-            <p class="success-title">Your workbook is ready.</p>
-            <a class="btn btn-gold btn-block" href="/downloads/nb-holdings-business-startup-workbook.pdf" download>Download the workbook</a>
+            <p class="success-title">Your downloads are ready.</p>
+            <div class="download-list"></div>
+            <button type="button" class="cross-path" data-open="real-estate">Also interested in real estate? Join that list too &rarr;</button>
           </div>
         </div>
       </section>
@@ -69,9 +77,9 @@
         <div class="path-panel" id="panel-realestate" hidden>
           <p>We're preparing training on land, entitlements, and building a real estate company. Join the waitlist to hear first when it's available.</p>
           <form class="lead-form" data-endpoint="https://formspree.io/f/xdegzwky" novalidate>
-            <input type="hidden" name="_subject" value="New Lead — Real Estate Waitlist">
+            <input type="hidden" name="_subject" value="New Lead — Real Estate">
             <input type="hidden" name="category" value="Real Estate">
-            <input type="hidden" name="resource" value="Real Estate Training Waitlist">
+            <input type="hidden" name="resources" value="Real Estate Training Waitlist">
             <input type="hidden" name="source" value="">
             <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
             <label>First name<input type="text" name="first" autocomplete="given-name" required></label>
@@ -83,6 +91,7 @@
           <div class="lead-success" hidden>
             <p class="success-title">You're on the list.</p>
             <p>We'll email you as soon as the training is ready.</p>
+            <button type="button" class="cross-path" data-open="business-idea">Have a business idea too? Get the free workbook &rarr;</button>
           </div>
         </div>
       </section>
