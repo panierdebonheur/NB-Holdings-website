@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  // Investor inquiries are delivered to this address (see README to switch to a form service).
+  // Shown to visitors if a submission fails; also used by the no-JavaScript mailto fallback.
   var IR_EMAIL = "markhamilton@nbholdingspartnership.com";
 
   document.documentElement.classList.remove("no-js");
@@ -124,14 +124,25 @@
     var data = new FormData(form);
     var interests = data.getAll("interest");
 
-    // If a form endpoint is configured (data-endpoint attribute), POST to it.
-    var endpoint = form.getAttribute("data-endpoint");
-    if (endpoint) {
+    // Send to HubSpot (Investor Inquiries form), with Formspree as backup.
+    if (window.NBLeads) {
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
       status.className = "form-status";
       status.textContent = "Submitting…";
-      fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
-        .then(function (res) {
-          if (!res.ok) throw new Error("Request failed");
+      window.NBLeads.send("investor", {
+        firstname: data.get("first"),
+        lastname: data.get("last"),
+        email: data.get("email"),
+        phone: data.get("phone"),
+        nb_investor_type: data.get("type"),
+        nb_investment_interests: interests.join(", "),
+        message: data.get("message"),
+        nb_accredited_representation: "true",
+        nb_lead_category: "Investor",
+        nb_lead_source: data.get("source")
+      }, data)
+        .then(function () {
           form.reset();
           status.className = "form-status success";
           status.textContent = "Thank you. A member of our Investor Relations team will be in touch shortly.";
@@ -139,7 +150,8 @@
         .catch(function () {
           status.className = "form-status error";
           status.textContent = "Something went wrong. Please email " + IR_EMAIL + " directly.";
-        });
+        })
+        .then(function () { btn.disabled = false; });
       return;
     }
 

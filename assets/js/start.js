@@ -99,13 +99,15 @@
       status.className = "form-status";
       status.textContent = "Sending…";
 
-      fetch(form.getAttribute("data-endpoint"), {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" }
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error("Request failed");
+      window.NBLeads.send(form.getAttribute("data-hubspot"), {
+        firstname: data.get("first"),
+        email: data.get("email"),
+        nb_lead_category: data.get("category"),
+        nb_resources_requested: data.get("resources"),
+        nb_lead_source: data.get("source"),
+        nb_email_consent: "true"
+      }, data)
+        .then(function () {
           known = { first: first.value.trim(), email: email.value.trim() };
           form.hidden = true;
           if (!success) return;
