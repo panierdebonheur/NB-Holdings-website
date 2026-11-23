@@ -79,6 +79,20 @@
   }
 
   // Investor inquiry form
+  // Lead source tracking: remember where a visitor came from (e.g. ?r=reel-name or
+  // utm_source/utm_campaign) and record it in any hidden "source" field on any page.
+  var leadSource = (function () {
+    var q = new URLSearchParams(window.location.search);
+    var parts = [q.get("utm_source"), q.get("utm_campaign"), q.get("r")].filter(Boolean);
+    var src = parts.join(" / ");
+    try {
+      if (src) sessionStorage.setItem("nb_src", src);
+      else src = sessionStorage.getItem("nb_src") || "";
+    } catch (e) {}
+    return src || (document.referrer ? "referrer: " + document.referrer : "direct");
+  })();
+  document.querySelectorAll('input[name="source"]').forEach(function (el) { el.value = leadSource; });
+
   var form = document.getElementById("inquiry-form");
   if (!form) return;
   var status = form.querySelector(".form-status");
