@@ -555,3 +555,18 @@ p { margin: 0 0 1.1em; }
 .start-site-link { text-align: center; margin-top: 10px; padding: 14px; color: var(--gold-light); font-size: .9rem; letter-spacing: .04em; }
 .start-foot { margin-top: 40px; text-align: center; font-size: .72rem; line-height: 1.7; color: rgba(246,242,234,.45); }
 .start-foot a { color: var(--gold-light); }
+.resource-picks { border: 0; padding: 0; margin: 0 0 18px; }
+.resource-picks legend { font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 10px; padding: 0; }
+.lead-form .pick {
+  display: flex; gap: 12px; align-items: flex-start; margin: 0 0 8px; padding: 14px;
+  border: 1px solid var(--line-light); background: rgba(246,242,234,.05); cursor: pointer;
+  text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--ivory); transition: border-color .25s, background .25s;
+}
+.lead-form .pick:has(input:checked) { border-color: rgba(184,149,90,.7); background: rgba(184,149,90,.1); }
+.lead-form .pick input { width: 18px; height: 18px; flex-shrink: 0; margin: 2px 0 0; accent-color: var(--gold); }
+.lead-form .pick span { display: flex; flex-direction: column; line-height: 1.35; }
+.lead-form .pick strong { font-weight: 500; font-size: .98rem; }
+.lead-form .pick small { font-size: .78rem; color: rgba(246,242,234,.6); margin-top: 2px; }
+.resource-picks.invalid .pick { border-color: #D9775F; }
+.download-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+.cross-path { background: none; border: 0; padding: 6px 0; font: inherit; font-size: .92rem; color: var(--gold-light); cursor: pointer; text-align: left; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(212,180,126,.4); }
