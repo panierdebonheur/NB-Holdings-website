@@ -500,3 +500,58 @@ p { margin: 0 0 1.1em; }
 .footer-social { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; color: var(--gold-light); font-size: .88rem; letter-spacing: .02em; transition: color .3s; }
 .footer-social svg { width: 22px; height: 22px; flex-shrink: 0; }
 .footer-social:hover { color: var(--ivory); }
+
+/* ---------- /start link-in-bio page ---------- */
+.start-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(184,149,90,.16), transparent 55%),
+    linear-gradient(180deg, var(--navy-900), var(--navy-800));
+  color: var(--ivory);
+}
+.start-wrap { max-width: 560px; margin: 0 auto; padding: 48px 20px 40px; }
+.start-head { text-align: center; margin-bottom: 34px; }
+.start-logo { display: inline-flex; flex-direction: column; align-items: center; color: var(--ivory); }
+.start-logo img { width: 74px; height: auto; margin-bottom: 14px; }
+.start-logo .brand-name { font-size: 1.9rem; }
+.start-logo .brand-sub { color: var(--gold-light); opacity: 1; }
+.start-tagline { font-family: var(--serif); font-style: italic; color: rgba(246,242,234,.75); margin: 16px 0 28px; font-size: 1.05rem; }
+.start-head h1 { font-size: clamp(2.2rem, 8vw, 2.9rem); margin: 0 0 .2em; }
+.start-intro { color: rgba(246,242,234,.65); margin: 0; }
+
+.paths { display: flex; flex-direction: column; gap: 14px; }
+.path { background: rgba(246,242,234,.04); border: 1px solid var(--line-light); transition: border-color .3s, background .3s; }
+.path.open, .path:hover { border-color: rgba(184,149,90,.55); background: rgba(246,242,234,.06); }
+.path-btn {
+  width: 100%; display: flex; align-items: center; gap: 16px; padding: 20px 20px;
+  background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.path-icon { width: 46px; height: 46px; flex-shrink: 0; display: grid; place-items: center; border: 1px solid rgba(184,149,90,.5); color: var(--gold-light); }
+.path-icon svg { width: 24px; height: 24px; }
+.path-text { flex: 1; display: flex; flex-direction: column; line-height: 1.35; }
+.path-text strong { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+.path-text small { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-light); margin-top: 4px; }
+.path-chev { width: 10px; height: 10px; border-right: 1.5px solid var(--gold-light); border-bottom: 1.5px solid var(--gold-light); transform: rotate(45deg); transition: transform .3s; margin-right: 4px; }
+.path.open .path-chev { transform: rotate(-135deg); }
+.path-arrow { color: var(--gold-light); font-size: 1.3rem; }
+
+.path-panel { padding: 0 20px 24px; }
+.path-panel > p { color: rgba(246,242,234,.78); font-size: .95rem; }
+.lead-form label { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 14px; }
+.lead-form input[type=text], .lead-form input[type=email] {
+  display: block; width: 100%; margin-top: 7px; font: inherit; font-size: 1rem; letter-spacing: 0; text-transform: none;
+  color: var(--ink); background: var(--paper); border: 1px solid transparent; border-radius: 0; padding: 13px 14px; -webkit-appearance: none; appearance: none;
+}
+.lead-form input:focus { outline: none; border-color: var(--gold); }
+.lead-form label.invalid input[type=text], .lead-form label.invalid input[type=email] { border-color: #D9775F; }
+.lead-form .consent { display: flex; gap: 10px; align-items: flex-start; text-transform: none; letter-spacing: 0; font-weight: 400; font-size: .85rem; color: rgba(246,242,234,.8); line-height: 1.5; margin: 6px 0 18px; }
+.lead-form .consent input { width: 18px; height: 18px; flex-shrink: 0; margin: 2px 0 0; accent-color: var(--gold); }
+.lead-form .consent.invalid span { color: #F0A08C; }
+.start-page .form-status { margin: 12px 0 0; font-size: .88rem; }
+.start-page .form-status.error { color: #F0A08C; }
+.lead-success { padding: 6px 0 0; }
+.lead-success p { color: rgba(246,242,234,.8); }
+.success-title { font-family: var(--serif); font-size: 1.5rem; color: var(--ivory) !important; margin-bottom: 12px; }
+.start-site-link { text-align: center; margin-top: 10px; padding: 14px; color: var(--gold-light); font-size: .9rem; letter-spacing: .04em; }
+.start-foot { margin-top: 40px; text-align: center; font-size: .72rem; line-height: 1.7; color: rgba(246,242,234,.45); }
+.start-foot a { color: var(--gold-light); }

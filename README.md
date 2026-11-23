@@ -32,6 +32,20 @@ Any static host works: GitHub Pages (Settings → Pages → deploy from this bra
 - Site: https://www.nbholdingspartnership.com (the `CNAME` file is for GitHub Pages; other hosts ignore it)
 - Investor contact: markhamilton@nbholdingspartnership.com. It appears in `index.html`, `privacy.html` and `IR_EMAIL` in `assets/js/main.js`.
 
+## Instagram link-in-bio page (`/start/`)
+
+`https://www.nbholdingspartnership.com/start/` is the link for the Instagram bio. Visitors choose a path:
+
+| Path | What happens | Category recorded |
+|---|---|---|
+| I have a business idea | Name + email + consent, then the Business Startup Workbook downloads (`downloads/`) | Business Idea |
+| I want to get into real estate | Joins the training waitlist | Real Estate |
+| I'm interested in investing | Goes to the accredited-investor inquiry on the home page | Investor |
+
+Every submission goes to Formspree with `category`, `resource` and `source` fields. **Source tracking:** add `?utm_source=instagram&r=<reel-name>` to a link (e.g. in a DM or story link) and that tag is saved with the lead, including if they move on to the investor form. Link straight to a path with `/start/#business-idea` or `/start/#real-estate`.
+
+To add a new free resource: put the PDF in `downloads/`, copy one of the `<section class="path">` blocks in `start/index.html`, and change the text, `resource` value and `data-download` path.
+
 ## Before going live
 
 - **Inquiry form:** submissions go through Formspree (`https://formspree.io/f/xdegzwky`) and are emailed to the address set in that Formspree form. Change the endpoint in the `<form>` tag in `index.html` if the form is ever replaced.
