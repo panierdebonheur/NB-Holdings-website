@@ -113,11 +113,12 @@
           if (!success) return;
           success.hidden = false;
 
-          // One download button per chosen resource
+          // One download button per chosen file; items without a file (e.g. a waitlist) just show a note
+          var files = chosen.filter(function (c) { return c.getAttribute("data-file"); });
           var list = success.querySelector(".download-list");
           if (list) {
             list.innerHTML = "";
-            chosen.forEach(function (c) {
+            files.forEach(function (c) {
               var a = document.createElement("a");
               a.className = "btn btn-gold btn-block download-btn";
               a.href = c.getAttribute("data-file");
@@ -125,9 +126,11 @@
               a.textContent = "Download: " + c.value;
               list.appendChild(a);
             });
-            // A single pick downloads automatically; several are listed to tap
-            if (chosen.length === 1) list.querySelector("a").click();
+            // A single file downloads automatically; several are listed to tap
+            if (files.length === 1) list.querySelector("a").click();
           }
+          var note = success.querySelector(".waitlist-note");
+          if (note) note.hidden = chosen.length === files.length;
         })
         .catch(function () {
           btn.disabled = false;

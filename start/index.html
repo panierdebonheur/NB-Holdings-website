@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Here | NB Holdings Partnership LLC</title>
-  <meta name="description" content="Free business startup resources, real estate training updates, and investor information from NB Holdings Partnership.">
+  <meta name="description" content="Free business startup resources, real estate tools and training updates, and investor information from NB Holdings Partnership.">
   <meta name="theme-color" content="#0B1B2B">
   <meta property="og:title" content="Start Here | NB Holdings Partnership">
-  <meta property="og:description" content="Free resources to turn an idea into a business, real estate training updates, and investor information.">
+  <meta property="og:description" content="Free resources to turn an idea into a business, real estate tools and training updates, and investor information.">
   <meta property="og:url" content="https://www.nbholdingspartnership.com/start/">
   <meta property="og:image" content="https://www.nbholdingspartnership.com/assets/img/nb-holdings-logo.jpg">
   <link rel="canonical" href="https://www.nbholdingspartnership.com/start/">
@@ -70,7 +70,7 @@
           <div class="lead-success" hidden>
             <p class="success-title">Your downloads are ready.</p>
             <div class="download-list"></div>
-            <button type="button" class="cross-path" data-open="real-estate">Also interested in real estate? Join that list too &rarr;</button>
+            <button type="button" class="cross-path" data-open="real-estate">Also interested in real estate? Get the free tools &rarr;</button>
           </div>
         </div>
       </section>
@@ -79,27 +79,39 @@
       <section class="path" id="real-estate">
         <button class="path-btn" aria-expanded="false" aria-controls="panel-realestate">
           <span class="path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M10 21v-6h4v6"/></svg></span>
-          <span class="path-text"><strong>I want to get into real estate</strong><small>Join the training waitlist</small></span>
+          <span class="path-text"><strong>I want to get into real estate</strong><small>Free tools &amp; training updates</small></span>
           <span class="path-chev" aria-hidden="true"></span>
         </button>
         <div class="path-panel" id="panel-realestate" hidden>
-          <p>We're preparing training on land, entitlements, and building a real estate company. Join the waitlist to hear first when it's available.</p>
+          <p>Free real estate tools to practice with, plus first word on our upcoming training. Tick what you'd like.</p>
           <form class="lead-form" data-hubspot="realestate" novalidate>
             <input type="hidden" name="_subject" value="New Lead — Real Estate">
             <input type="hidden" name="category" value="Real Estate">
-            <input type="hidden" name="resources" value="Real Estate Training Waitlist">
             <input type="hidden" name="source" value="">
             <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <fieldset class="resource-picks">
+              <legend>Choose your free resources</legend>
+              <!-- To add a resource: copy one <label class="pick"> block, then change value, data-file and the text. -->
+              <label class="pick">
+                <input type="checkbox" name="resources" value="Real Estate Purchase and Sale Agreement (Example)" data-file="/downloads/nb-holdings-real-estate-purchase-and-sale-agreement-example.pdf" checked>
+                <span><strong>Basic Real Estate Purchase &amp; Sale Agreement</strong><small>Fillable training example &middot; PDF</small></span>
+              </label>
+              <label class="pick">
+                <input type="checkbox" name="resources" value="Real Estate Training Waitlist" checked>
+                <span><strong>Notify me about upcoming training</strong><small>Land, entitlements &amp; building a real estate company</small></span>
+              </label>
+            </fieldset>
             <label>First name<input type="text" name="first" autocomplete="given-name" required></label>
             <label>Email<input type="email" name="email" autocomplete="email" required></label>
-            <label class="consent"><input type="checkbox" name="email_consent" value="Yes" required><span>Email me when the training is available, plus occasional resources from NB Holdings. Unsubscribe anytime.</span></label>
-            <button type="submit" class="btn btn-gold btn-block">Join the waitlist</button>
+            <label class="consent"><input type="checkbox" name="email_consent" value="Yes" required><span>Send me my resources, training updates, and occasional emails from NB Holdings. Unsubscribe anytime.</span></label>
+            <button type="submit" class="btn btn-gold btn-block">Get my free resources</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
           <div class="lead-success" hidden>
-            <p class="success-title">You're on the list.</p>
-            <p>We'll email you as soon as the training is ready.</p>
-            <button type="button" class="cross-path" data-open="business-idea">Have a business idea too? Get the free workbook &rarr;</button>
+            <p class="success-title">You're all set.</p>
+            <div class="download-list"></div>
+            <p class="waitlist-note" hidden>You're on the training list. We'll email you as soon as it's ready.</p>
+            <button type="button" class="cross-path" data-open="business-idea">Have a business idea too? Get the free workbooks &rarr;</button>
           </div>
         </div>
       </section>
