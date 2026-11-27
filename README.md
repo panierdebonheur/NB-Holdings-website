@@ -39,7 +39,7 @@ Any static host works: GitHub Pages (Settings → Pages → deploy from this bra
 | Path | What happens | Category recorded |
 |---|---|---|
 | I have a business idea | Visitor ticks the downloads they want, enters name + email + consent, then gets a download button for each (a single pick downloads automatically) | Business Idea |
-| I want to get into real estate | Joins the training waitlist (can become a download list the same way) | Real Estate |
+| I want to get into real estate | Visitor ticks real estate downloads and/or "notify me about upcoming training"; files get download buttons, the training option shows a confirmation | Real Estate |
 | I'm interested in investing | Goes to the accredited-investor inquiry on the home page | Investor |
 
 Every submission goes to HubSpot as a separate lead with `category`, `resources` (what they chose, comma-separated) and `source`. Someone who signs up on two paths is recorded once in each category; after one sign-up, the page offers the other path with their name and email pre-filled.
